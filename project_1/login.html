@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>로그인 페이지</title>
+    <link rel="stylesheet" href="../css/login.css" />
+  </head>
+  <body>
+    <form onsubmit="return login()">
+      <h1>
+        <img
+          class="img"
+          src="images/icon.png"
+          alt="레저를 잇다"
+          width="200px"
+        />
+      </h1>
+      <div class="login__container">
+        <label class="label" for="username">이메일</label>
+        <input type="text" id="username" name="username" />
+        <label class="label" for="password">비밀번호</label>
+        <input type="password" id="password" name="password" />
+      </div>
+      <button class="input_btn" type="submit">로그인</button>
+    </form>
+    <div id="login-error" style="display: none">
+      <h2>로그인 실패</h2>
+      <p>이메일 또는 비밀번호를 확인해 주세요...</p>
+    </div>
+    </div>
+    <script src="./script/login.js"></script>
+  </body>
+</html>

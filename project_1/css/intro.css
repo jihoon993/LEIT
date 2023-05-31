@@ -1,0 +1,47 @@
+body {
+  background-color: #d4d0d6;
+}
+
+.intro_h1 {
+  font-size: 2.5em;
+  text-align: center;
+  padding-top: 1em;
+}
+
+hr {
+  border: 1px solid #ccc;
+}
+
+.intro_div {
+  width: 80%;
+  margin: auto;
+  margin-top: 30px;
+}
+
+.intro_h2 {
+  font-size: 1.8em;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 1.2em;
+  line-height: 1.8em;
+}
+
+.intro_ul {
+  list-style: none;
+  font-size: 1.2em;
+  margin-left: 3px;
+  line-height: 2em;
+}
+
+.intro_ul > li::before {
+  content: "✦";
+  margin-right: 10px;
+  font-size: 1.2em;
+  color: #2c3e50; /*원하는 색상으로 변경 가능*/
+}
+
+#div3 {
+  height: 400px;
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>레저 스포츠 소개 프로젝트</title>
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/intro.css" />
+  </head>
+  <body>
+    <header>
+      <div class="cen">
+        <h1>
+          <a href="index.html">
+            <img class="img__name" src="./images/name.png" alt="" /><img
+              class="img"
+              src="images/icon.png"
+              alt="레저를 잇다"
+            />
+          </a>
+        </h1>
+        <nav id="lnb">
+          <ul>
+            <li class="main">
+              <a href="intro.html">소개</a>
+            </li>
+            <li class="main">
+              <a href="#">종류</a>
+              <ul class="sub">
+                <li><a href="mountain.html">산악레저</a></li>
+                <li><a href="sea.html">해양레저</a></li>
+                <li><a href="sky.html">익스트림</a></li>
+              </ul>
+            </li>
+            <li class="main">
+              <a href="#">고객지원</a>
+              <ul class="sub">
+                <li><a href="#">고객지원 안내</a></li>
+                <li><a href="#">개발자 센터</a></li>
+                <li><a href="#">자주하는 질문</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <nav id="gnb">
+          <div id="loggedInButtons" style="display: none">
+            <a href="#" onclick="logout()">로그아웃</a>
+          </div>
+          <div id="loggedOutButtons">
+            <a href="login.html">로그인</a>
+            <a href="register.html">회원가입</a>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <section>
+      <h1 class="intro_h1">레저 스포츠 소개 프로젝트</h1>
+      <hr />
+      <div class="intro_div">
+        <h2 class="intro_h2">프로젝트 개요</h2>
+        <p>
+          본 프로젝트는 다양한 레저 스포츠를 소개하는 HTML 페이지를 제작하는
+          것을 목표로 합니다. <br />
+          이를 통해 사용자들이 레저 스포츠에 대한 정보를 쉽게 얻을 수 있도록
+          하고, 각 스포츠의 매력을 전달하여 관심을 끌어내고자 합니다.
+        </p>
+      </div>
+
+      <div class="intro_div">
+        <h2 class="intro_h2">프로젝트 기간 및 참여인원</h2>
+        <p>프로젝트 기간 : 2023년 5월 12일 ~ 2023 5월 31일 (약 3주)</p>
+        <div>
+          <p>개발 도구</p>
+          <img src="images/vscode.png" alt="" width="100px" height="100px" />
+        </div>
+        <p>참여 인원 : 총 3명 (개발자 3명)</p>
+      </div>
+
+      <div class="intro_div" id="div3">
+        <h2 class="intro_h2">주요 내용</h2>
+        <ul class="intro_ul">
+          <li>각종 레저 스포츠의 소개와 역사</li>
+          <li>레저 스포츠 종목별 기본 정보 및 장비</li>
+          <li>전문가 인터뷰와 추천하는 레저 스포츠 활동</li>
+          <li>레저 스포츠를 즐기기 위한 팁과 안전 지침</li>
+        </ul>
+      </div>
+    </section>
+  </body>
+</html>

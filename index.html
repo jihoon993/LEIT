@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Leit</title>
+    <meta name="author" content="프로젝트조" />
+    <meta name="keywords" content="레저, 스포츠, 연계, 휴가, 레저를 잇다" />
+    <meta name="description" content="레저연계사이트 레저를 잇다 입니다." />
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/slide.css" />
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      type="text/javascript"
+      src="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+  </head>
+
+  <body onload="updateLoginButtons()">
+    <script>
+      function updateLoginButtons() {
+        if (sessionStorage.getItem("loggedInUser")) {
+          document.getElementById("loggedInButtons").style.display = "block";
+          document.getElementById("loggedOutButtons").style.display = "none";
+        } else {
+          document.getElementById("loggedInButtons").style.display = "none";
+          document.getElementById("loggedOutButtons").style.display = "block";
+        }
+      }
+
+      document.addEventListener("DOMContentLoaded", function (event) {
+        updateLoginButtons();
+      });
+
+      function logout() {
+        sessionStorage.removeItem("loggedInUser");
+        updateLoginButtons();
+      }
+    </script>
+    <header>
+      <div class="cen">
+        <h1 class="index_h1">
+          <a href="index.html">
+            <img class="img__name" src="./images/name.png" alt="" /><img
+              class="img"
+              src="images/icon.png"
+              alt="레저를 잇다"
+            />
+          </a>
+        </h1>
+        <nav id="lnb">
+          <ul>
+            <li class="main">
+              <a href="intro.html">소개</a>
+            </li>
+            <li class="main">
+              <a href="#">종류</a>
+              <ul class="sub">
+                <li><a href="mountain.html">산악레저</a></li>
+                <li><a href="sea.html">해양레저</a></li>
+                <li><a href="sky.html">익스트림</a></li>
+              </ul>
+            </li>
+            <li class="main">
+              <a href="#">고객지원</a>
+              <ul class="sub">
+                <li><a href="#">고객지원 안내</a></li>
+                <li><a href="#">개발자 센터</a></li>
+                <li><a href="#">자주하는 질문</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <nav id="gnb">
+          <div id="loggedInButtons" style="display: none">
+            <a href="#" onclick="logout()">로그아웃</a>
+          </div>
+          <div id="loggedOutButtons">
+            <a href="login.html">로그인</a>
+            <a href="register.html">회원가입</a>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <section>
+      <div class="section-content">
+        <div id="mainVisual">
+          <a href="intro.html"
+            ><img class="slide" src="images/test.jpg" alt="슬라이더 이미지1"
+          /></a>
+          <a href="mountain.html"
+            ><img class="slide" src="images/test2.jpg" alt="슬라이더 이미지2"
+          /></a>
+          <a href="sea.html"
+            ><img class="slide" src="images/test3.jpg" alt="슬라이더 이미지3"
+          /></a>
+          <a href="sky.html"
+            ><img class="slide" src="images/gliding.jpg" alt="슬라이더 이미지4"
+          /></a>
+        </div>
+        <div class="right-content">
+          <div>
+            <a href=""
+              ><img
+                class="main_side_bar_1"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Facebook_Logo_%282019%29.png/1024px-Facebook_Logo_%282019%29.png"
+                alt=""
+            /></a>
+            <a href="https://www.instagram.com/nu_ba_nu/"
+              ><img
+                class="main_side_bar_2"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/2048px-Instagram_icon.png"
+                alt=""
+            /></a>
+            <a href=""
+              ><img
+                class="main_side_bar_3"
+                src="https://img.freepik.com/free-icon/youtube_318-566773.jpg"
+                alt=""
+            /></a>
+          </div>
+          <h2 class="main_side_news_header">전세계 레저 스포츠 뉴스!</h2>
+          <div class="main_side_news">
+            <a href="#">전 세계 레저 스포츠의 소식을 확인하세요!</a> <br />
+            <a href="#">야구는 레저 스포츠인가? 일반 스포츠인가?</a> <br />
+            <a href="#">저희 '레저를 잇다'사이트의 오신 걸 환영합니다!</a>
+            <br />
+            <a href="#">감사합니다.</a>
+          </div>
+        </div>
+      </div>
+      <script>
+        $("#products").slick({
+          slidesToShow: 3,
+          autoplay: true,
+          autoplaySpeed: 5000,
+        });
+      </script>
+    </section>
+    <hr />
+    <footer class="Footer__total" id="Footer_total">
+      <div class="Footer__section" id="Customer_support">
+        <h3 class="Footer__title">고객지원 안내</h3>
+        <p class="Footer__content">
+          tel. 010-xxxx-xxxx E-mail. xxxxxxx@gmail.com
+        </p>
+      </div>
+      <div class="Footer__section" id="Developer_center">
+        <h3 class="Footer__title">개발자 센터</h3>
+        <p class="Footer__content">
+          <a href="https://naver.com">개발자 센터 바로가기</a>
+        </p>
+      </div>
+      <div class="Footer__section" id="FAQ">
+        <h3 class="Footer__title">자주하는 질문</h3>
+        <p class="Footer__content">Q&A</p>
+      </div>
+    </footer>
+    <script src="script/script.js"></script>
+  </body>
+</html>
